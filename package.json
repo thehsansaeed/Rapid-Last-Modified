@@ -1,0 +1,46 @@
+{
+  "name": "rapid-last-modified",
+  "displayName": "Rapid Last Modified",
+  "description": "The extension offers users a convenient way to track the latest modifications in the active file, displaying timestamps and usernames. It seamlessly integrates this information into the status bar and visually enhances the file's end. The extension ensures compatibility across Windows and Linux systems and prioritizes user experience with robust error handling for uninterrupted functionality.",
+  "publisher": "ahsansaeed",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "images/logo.png",
+  "galleryBanner": "data:image/gif;base64, $base64String",
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "lastModifiedDateView",
+        "title": "Activate Last Modified"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.86.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8"
+  },
+  "imagePath": "./images/logo.png",
+  "tutorialImage": "./images/tutorial-image.gif"
+}
